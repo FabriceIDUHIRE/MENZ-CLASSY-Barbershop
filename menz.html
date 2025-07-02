@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="MENZ CLASSY Barbershop - Premium grooming services in Kigali, Rwanda. Home of The Barbershop Talk show. Book your appointment today.">
+    <meta name="keywords"
+        content="barbershop Kigali, Rwanda grooming, premium haircuts, beard styling, men's grooming, barbershop talk">
+    <meta name="author" content="MENZ CLASSY">
+    <meta property="og:title" content="MENZ CLASSY Barbershop | Professional Grooming in Rwanda">
+    <meta property="og:description"
+        content="Premium men's grooming services in Kigali. Experience world-class haircuts and watch The Barbershop Talk.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://menzclassy.com">
+    <meta property="og:image" content="https://menzclassy.com/images/social-preview.jpg">
+    <title>MENZ CLASSY Barbershop | Premium Grooming in Rwanda</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap"
+        as="style">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            400: '#D4AF37',
+                            500: '#C9A227',
+                            600: '#BD9B1B',
+                        },
+                        dark: {
+                            900: '#0F0F0F',
+                            800: '#1A1A1A',
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Playfair Display', 'serif'],
+                        body: ['Montserrat', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom CSS */
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(15, 15, 15, 0.8) 0%, rgba(201, 162, 39, 0.3) 100%);
+        }
+
+        .service-card:hover .service-icon {
+            transform: rotateY(180deg);
+        }
+
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .booking-form input:focus,
+        .booking-form select:focus,
+        .booking-form textarea:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(201, 162, 39, 0.5);
+        }
+    </style>
+</head>
+
+<body class="bg-dark-900 text-gray-100 font-body">
+    <!-- Loading Screen -->
+    <div id="loading" class="fixed inset-0 bg-dark-900 z-50 flex items-center justify-center">
+        <div class="animate-pulse flex flex-col items-center">
+            <div class="w-16 h-16 bg-gold-500 rounded-full mb-4"></div>
+            <p class="text-gold-500 font-semibold">Loading MENZ CLASSY...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-dark-800 sticky top-0 z-40 shadow-lg" style="padding: .7rem;">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <!-- Actual logo should be placed here -->
+                <div
+                    class="w-10 h-10 bg-gold-500 rounded-full flex items-center justify-center text-dark-900 font-bold text-lg">
+                    MC
+                </div>
+                <a href="#home" class="text-2xl font-bold font-heading">MENZ CLASSY <span
+                        class="text-gold-500">Barbershop</span></a>
+            </div>
+
+            <div class="hidden lg:flex space-x-8 items-center">
+                <a href="#home" class="hover:text-gold-500 transition duration-300">Home</a>
+                <a href="#about" class="hover:text-gold-500 transition duration-300">About</a>
+                <a href="#services" class="hover:text-gold-500 transition duration-300">Services</a>
+                <a href="#barbers" class="hover:text-gold-500 transition duration-300">Our Barbers</a>
+                <a href="#gallery" class="hover:text-gold-500 transition duration-300">Gallery</a>
+                <a href="#videos" class="hover:text-gold-500 transition duration-300">Barbershop Talk</a>
+                <a href="#contact" class="hover:text-gold-500 transition duration-300">Contact</a>
+                <a href="#book"
+                    class="bg-gold-500 text-dark-900 px-5 py-2 rounded-md hover:bg-gold-400 font-semibold transition duration-300 flex items-center">
+                    <i class="fas fa-calendar-alt mr-2"></i> Book Now
+                </a>
+            </div>
+
+            <div class="lg:hidden flex items-center space-x-4">
+                <a href="tel:+250123456789" class="text-gold-500">
+                    <i class="fas fa-phone"></i>
+                </a>
+                <button id="mobile-menu-btn" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-dark-800 px-4 py-3 border-t border-gold-500/20">
+            <div class="flex flex-col space-y-3">
+                <a href="#home"
+                    class="py-2 hover:text-gold-500 transition duration-300 border-b border-gray-700">Home</a>
+                <a href="#about"
+                    class="py-2 hover:text-gold-500 transition duration-300 border-b border-gray-700">About</a>
+                <a href="#services"
+                    class="py-2 hover:text-gold-500 transition duration-300 border-b border-gray-700">Services</a>
+                <a href="#barbers" class="py-2 hover:text-gold-500 transition duration-300 border-b border-gray-700">Our
+                    Barbers</a>
+                <a href="#gallery"
+                    class="py-2 hover:text-gold-500 transition duration-300 border-b border-gray-700">Gallery</a>
+                <a href="#videos"
+                    class="py-2 hover:text-gold-500 transition duration-300 border-b border-gray-700">Barbershop
+                    Talk</a>
+                <a href="#contact"
+                    class="py-2 hover:text-gold-500 transition duration-300 border-b border-gray-700">Contact</a>
+                <a href="#book"
+                    class="bg-gold-500 text-dark-900 py-2 rounded-md hover:bg-gold-400 font-semibold transition duration-300 text-center">
+                    <i class="fas fa-calendar-alt mr-2"></i> Book Appointment
+                </a>
+            </div>
+
+            <div class="mt-4 pt-4 border-t border-gray-700 flex justify-center space-x-6">
+                <a href="https://facebook.com" class="text-gold-500 hover:text-gold-400"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com" class="text-gold-500 hover:text-gold-400"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com" class="text-gold-500 hover:text-gold-400"><i
+                        class="fab fa-youtube"></i></a>
+                <a href="https://twitter.com" class="text-gold-500 hover:text-gold-400"><i
+                        class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="hero-image absolute inset-0 w-full h-full parallax"></div>
+        <div class="hero-gradient absolute inset-0 w-full h-full"></div>
+
+        <div class="relative z-10 container mx-auto px-6 text-center animate-fade-in">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold font-heading mb-6 leading-tight">
+                <span class="text-white">Premium Men's</span> <br>
+                <span class="text-gold-500">Grooming Experience</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
+                Where style meets precision in the heart of Kigali. Experience world-class barbering and join the
+                conversation on our exclusive YouTube show.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#book"
+                    class="bg-gold-500 hover:bg-gold-600 text-dark-900 px-8 py-4 rounded-md font-bold text-lg transition duration-300 flex items-center justify-center">
+                    <i class="fas fa-calendar-check mr-3"></i> Book Appointment
+                </a>
+                <a href="#videos"
+                    class="border-2 border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-dark-900 px-8 py-4 rounded-md font-bold text-lg transition duration-300 flex items-center justify-center">
+                    <i class="fab fa-youtube mr-3"></i> Watch Our Show
+                </a>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-0 right-0 z-10 flex justify-center animate-bounce">
+            <a href="#about" class="text-gold-500 hover:text-gold-400">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <div class="bg-gold-500 text-dark-900 py-4">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <div class="p-3">
+                    <div class="text-3xl font-bold font-heading">5+</div>
+                    <div class="text-sm uppercase tracking-wider">Years Experience</div>
+                </div>
+                <div class="p-3">
+                    <div class="text-3xl font-bold font-heading">10K+</div>
+                    <div class="text-sm uppercase tracking-wider">Happy Clients</div>
+                </div>
+                <div class="p-3">
+                    <div class="text-3xl font-bold font-heading">15+</div>
+                    <div class="text-sm uppercase tracking-wider">Awards Won</div>
+                </div>
+                <div class="p-3">
+                    <div class="text-3xl font-bold font-heading">100%</div>
+                    <div class="text-sm uppercase tracking-wider">Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-dark-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 animate-slide-up">
+                <span class="text-gold-500 font-semibold uppercase tracking-wider">About Us</span>
+                <h2 class="text-4xl font-bold font-heading mt-2">The MENZ CLASSY Story</h2>
+                <div class="w-20 h-1 bg-gold-500 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="relative animate-slide-up">
+                    <img src="https://images.unsplash.com/photo-1599351431402-50c2e0c85a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80"
+                        alt="Our Barbershop" class="w-full rounded-lg shadow-2xl">
+                    <div class="absolute -bottom-6 -right-6 bg-gold-500 text-dark-900 p-6 rounded-lg shadow-lg w-3/4">
+                        <div class="text-3xl font-bold font-heading">2018</div>
+                        <p class="font-semibold">Founded in Kigali</p>
+                    </div>
+                </div>
+
+                <div class="animate-slide-up">
+                    <h3 class="text-2xl font-bold font-heading mb-4">Redefining Men's Grooming in Rwanda</h3>
+                    <p class="mb-6 text-gray-300">
+                        MENZ CLASSY was born from a passion for craftsmanship and a vision to elevate men's grooming
+                        standards in Rwanda. What started as a single-chair barbershop has grown into Kigali's premier
+                        destination for discerning gentlemen seeking exceptional service and style.
+                    </p>
+                    <p class="mb-6 text-gray-300">
+                        Our founder, a master barber with international experience, recognized the need for a space
+                        where tradition meets contemporary style, where every client receives personalized attention and
+                        leaves feeling confident.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div
+                                    class="w-6 h-6 rounded-full bg-gold-500 flex items-center justify-center text-dark-900">
+                                    <i class="fas fa-check text-xs"></i>
+                                </div>
+                            </div>
+                            <p class="ml-3 text-gray-300">
+                                <span class="font-semibold text-white">Premium Products:</span> We use only the finest
+                                grooming products from trusted international brands.
+                            </p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div
+                                    class="w-6 h-6 rounded-full bg-gold-500 flex items-center justify-center text-dark-900">
+                                    <i class="fas fa-check text-xs"></i>
+                                </div>
+                            </div>
+                            <p class="ml-3 text-gray-300">
+                                <span class="font-semibold text-white">Sanitation Excellence:</span> All tools are
+                                sterilized between clients for your safety and peace of mind.
+                            </p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div
+                                    class="w-6 h-6 rounded-full bg-gold-500 flex items-center justify-center text-dark-900">
+                                    <i class="fas fa-check text-xs"></i>
+                                </div>
+                            </div>
+                            <p class="ml-3 text-gray-300">
+                                <span class="font-semibold text-white">Community Hub:</span> More than a barbershop,
+                                we're a gathering place for meaningful conversations.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 flex flex-wrap gap-4">
+                        <a href="#barbers"
+                            class="bg-gold-500 hover:bg-gold-600 text-dark-900 px-6 py-3 rounded-md font-semibold transition duration-300">
+                            Meet Our Barbers
+                        </a>
+                        <a href="#services"
+                            class="border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-dark-900 px-6 py-3 rounded-md font-semibold transition duration-300">
+                            View Services
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-dark-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-gold-500 font-semibold uppercase tracking-wider">Our Services</span>
+                <h2 class="text-4xl font-bold font-heading mt-2">Premium Grooming Experiences</h2>
+                <div class="w-20 h-1 bg-gold-500 mx-auto mt-4"></div>
+                <p class="max-w-2xl mx-auto mt-6 text-gray-300">
+                    Each service is tailored to your individual needs, performed by our master barbers using the finest
+                    tools and products.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div
+                    class="bg-dark-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 border border-gold-500/10 hover:border-gold-500/30 group">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80"
+                            alt="Classic Haircut"
+                            class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-900 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="text-2xl font-bold font-heading text-white">Classic Haircut</h3>
+                            <p class="text-gold-500 font-semibold">RWF 10,000</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-center mb-4">
+                            <div
+                                class="service-icon w-16 h-16 bg-gold-500/10 rounded-full flex items-center justify-center text-gold-500 text-2xl transition duration-500">
+                                <i class="fas fa-cut"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-center mb-4">
+                            A timeless cut tailored to your facial structure and personal style, finished with precision
+                            detailing.
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gold-500 mr-2"></i>
+                                <span class="text-gray-300">Consultation included</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gold-500 mr-2"></i>
+                                <span class="text-gray-300">Hair wash & styling</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gold-500 mr-2"></i>
+                                <span class="text-gray-300">Hot towel treatment</span>
+                            </li>
+                        </ul>
+                        <a href="#book"
+                            class="block text-center bg-gold-500 hover:bg-gold-600 text-dark-900 py-2 rounded-md font-semibold transition duration-300">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div
+                    class="bg-dark-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 border border-gold-500/10 hover:border-gold-500/30 group">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
+                            alt="Fade Haircut"
+                            class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-900 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="text-2xl font-bold font-heading text-white">Premium Fade</h3>
+                            <p class="text-gold-500 font-semibold">RWF 15,000</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-center mb-4">
+                            <div
+                                class="service-icon w-16 h-16 bg-gold-500/10 rounded-full flex items-center justify-center text-gold-500 text-2xl transition duration-500">
+                                <i class="fas fa-arrows-alt-v"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-center mb-4">
+                            Our signature fade with seamless transitions, customized to your preference (low, mid, or
+                            high).
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gold-500 mr-2"></i>
+                                <span class="text-gray-300">Precision clipper work</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gold-500 mr-2"></i>
+                                <span class="text-gray-300">Detailed edge-up</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gold-500 mr-2"></i>
+                                <span class="text-gray-300">Scalp massage</span>
+                            </li>
+                        </ul>
+                        <a href="#book"
+                            class="block text-center bg-gold-500 hover:bg-gold-600 text-dark-900 py-2 rounded-md font-semibold transition duration-300">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div
+                    class="bg-dark-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 border border-gold-500/10 hover:border-gold-500/30 group">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
+                            alt="Beard Grooming"
+                            class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-900 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="text-2xl font-bold font-heading text-white">Royal Beard Treatment</h3>
+                            <p class="text-gold-500 font-semibold">RWF 12,000</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-center mb-4">
+                            <div
+                                class="service-icon w-16 h-16 bg-gold-500/10 rounded-full flex items-center justify-center text-gold-500 text-2xl transition duration-500">
+                                <i class="fas fa-air-freshener"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-center mb-4">
+                            Complete beard transformation including shaping, trimming, and conditioning for optimal
+                            health and style.
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gold-500 mr-2"></i>
+                                <span class="text-gray-300">Beard analysis</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gold-500 mr-2"></i>
+                                <span class="text-gray-300">Hot towel treatment</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-gold-500 mr-2"></i>
+                                <span class="text-gray-300">Premium beard oil</span>
+                            </li>
+                        </ul>
+                        <a href="#book"
+                            class="block text-center bg-gold-500 hover:bg-gold-600 text-dark-900 py-2 rounded-md font-semibold transition duration-300">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="#services-full"
+                    class="inline-flex items-center text-gold-500 hover:text-gold-400 font-semibold">
+                    View All Services <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Barbers Section -->
+    <section id="barbers" class="py-20 bg-dark-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-gold-500 font-semibold uppercase tracking-wider">Our Team</span>
+                <h2 class="text-4xl font-bold font-heading mt-2">Master Barbers</h2>
+                <div class="w-20 h-1 bg-gold-500 mx-auto mt-4"></div>
+                <p class="max-w-2xl mx-auto mt-6 text-gray-300">
+                    Meet our team of skilled professionals, each with specialized training and a passion for perfection.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Barber 1 -->
+                <div
+                    class="bg-dark-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="relative">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Barber John"
+                            class="w-full h-80 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-900 to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="text-2xl font-bold font-heading text-white">John Doe</h3>
+                            <p class="text-gold-500">Master Barber</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-300 mb-4">
+                            With over 12 years of international experience, John specializes in classic cuts and
+                            traditional barbering techniques.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gold-500 hover:text-gold-400">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="text-gold-500 hover:text-gold-400">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Barber 2 -->
+                <div
+                    class="bg-dark-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="relative">
+                        <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Barber Mike"
+                            class="w-full h-80 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-900 to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="text-2xl font-bold font-heading text-white">Mike Smith</h3>
+                            <p class="text-gold-500">Fade Specialist</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-300 mb-4">
+                            Mike's precision fades and contemporary styles have made him one of Kigali's most
+                            sought-after barbers.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gold-500 hover:text-gold-400">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="text-gold-500 hover:text-gold-400">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Barber 3 -->
+                <div
+                    class="bg-dark-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="relative">
+                        <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Barber Alex"
+                            class="w-full h-80 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-900 to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="text-2xl font-bold font-heading text-white">Alex Kwezi</h3>
+                            <p class="text-gold-500">Beard Specialist</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-300 mb-4">
+                            Alex transforms beards into works of art with his meticulous grooming techniques and product
+                            expertise.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gold-500 hover:text-gold-400">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="text-gold-500 hover:text-gold-400">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Barber 4 -->
+                <div
+                    class="bg-dark-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="relative">
+                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Barber David"
+                            class="w-full h-80 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-900 to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="text-2xl font-bold font-heading text-white">David N.</h3>
+                            <p class="text-gold-500">Color Specialist</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-300 mb-4">
+                            David's expertise in hair coloring and treatments helps clients achieve their perfect look
+                            with healthy hair.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gold-500 hover:text-gold-400">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="text-gold-500 hover:text-gold-400">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="#book"
+                    class="inline-flex items-center bg-gold-500 hover:bg-gold-600 text-dark-900 px-8 py-4 rounded-md font-bold text-lg transition duration-300">
+                    <i class="fas fa-calendar-check mr-3"></i> Book Your Barber
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-dark-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-gold-500 font-semibold uppercase tracking-wider">Testimonials</span>
+                <h2 class="text-4xl font-bold font-heading mt-2">What Our Clients Say</h2>
+                <div class="w-20 h-1 bg-gold-500 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div
+                    class="bg-dark-800 p-8 rounded-lg border border-gold-500/10 hover:border-gold-500/30 transition duration-300">
+                    <div class="flex mb-4">
+                        <div class="text-gold-500">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic mb-6">
+                        "MENZ CLASSY has completely transformed my grooming routine. The attention to detail is
+                        unmatched in Kigali. My barber remembers exactly how I like my fade every time."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Jean-Paul M."
+                            class="w-12 h-12 rounded-full mr-4 border-2 border-gold-500">
+                        <div>
+                            <h4 class="font-bold text-white">Jean-Paul M.</h4>
+                            <p class="text-gray-400 text-sm">Regular Client, 2 years</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div
+                    class="bg-dark-800 p-8 rounded-lg border border-gold-500/10 hover:border-gold-500/30 transition duration-300">
+                    <div class="flex mb-4">
+                        <div class="text-gold-500">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic mb-6">
+                        "As a business professional, first impressions matter. The team at MENZ CLASSY ensures I always
+                        look sharp. The hot towel shave is my weekly ritual - pure luxury!"
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="David N."
+                            class="w-12 h-12 rounded-full mr-4 border-2 border-gold-500">
+                        <div>
+                            <h4 class="font-bold text-white">David N.</h4>
+                            <p class="text-gray-400 text-sm">Business Executive</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div
+                    class="bg-dark-800 p-8 rounded-lg border border-gold-500/10 hover:border-gold-500/30 transition duration-300">
+                    <div class="flex mb-4">
+                        <div class="text-gold-500">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic mb-6">
+                        "I've been to many barbershops in Africa, and MENZ CLASSY stands out. The atmosphere is
+                        welcoming, the conversation is great, and my beard has never looked better."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Kwame O."
+                            class="w-12 h-12 rounded-full mr-4 border-2 border-gold-500">
+                        <div>
+                            <h4 class="font-bold text-white">Kwame O.</h4>
+                            <p class="text-gray-400 text-sm">Frequent Traveler</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-dark-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-gold-500 font-semibold uppercase tracking-wider">Gallery</span>
+                <h2 class="text-4xl font-bold font-heading mt-2">Our Work</h2>
+                <div class="w-20 h-1 bg-gold-500 mx-auto mt-4"></div>
+                <p class="max-w-2xl mx-auto mt-6 text-gray-300">
+                    Browse through our collection of transformations and the MENZ CLASSY experience.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <a href="#" class="gallery-item group">
+                    <img src="https://images.unsplash.com/photo-1599351431402-50c2e0c85a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80"
+                        alt="Barbershop Interior"
+                        class="w-full h-64 object-cover rounded-lg transition duration-300 group-hover:opacity-80">
+                    <div
+                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-2xl text-white bg-gold-500 p-3 rounded-full"></i>
+                    </div>
+                </a>
+                <a href="#" class="gallery-item group">
+                    <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80"
+                        alt="Haircut"
+                        class="w-full h-64 object-cover rounded-lg transition duration-300 group-hover:opacity-80">
+                    <div
+                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-2xl text-white bg-gold-500 p-3 rounded-full"></i>
+                    </div>
+                </a>
+                <a href="#" class="gallery-item group">
+                    <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
+                        alt="Barber at Work"
+                        class="w-full h-64 object-cover rounded-lg transition duration-300 group-hover:opacity-80">
+                    <div
+                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-2xl text-white bg-gold-500 p-3 rounded-full"></i>
+                    </div>
+                </a>
+                <a href="#" class="gallery-item group">
+                    <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                        alt="Client Haircut"
+                        class="w-full h-64 object-cover rounded-lg transition duration-300 group-hover:opacity-80">
+                    <div
+                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-2xl text-white bg-gold-500 p-3 rounded-full"></i>
+                    </div>
+                </a>
+                <a href="#" class="gallery-item group">
+                    <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
+                        alt="Beard Grooming"
+                        class="w-full h-64 object-cover rounded-lg transition duration-300 group-hover:opacity-80">
+                    <div
+                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-2xl text-white bg-gold-500 p-3 rounded-full"></i>
+                    </div>
+                </a>
+                <a href="#" class="gallery-item group">
+                    <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80"
+                        alt="Barber Tools"
+                        class="w-full h-64 object-cover rounded-lg transition duration-300 group-hover:opacity-80">
+                    <div
+                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-2xl text-white bg-gold-500 p-3 rounded-full"></i>
+                    </div>
+                </a>
+                <a href="#" class="gallery-item group">
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=986&q=80"
+                        alt="Hot Towel Shave"
+                        class="w-full h-64 object-cover rounded-lg transition duration-300 group-hover:opacity-80">
+                    <div
+                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-2xl text-white bg-gold-500 p-3 rounded-full"></i>
+                    </div>
+                </a>
+                <a href="#" class="gallery-item group">
+                    <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=988&q=80"
+                        alt="Client Transformation"
+                        class="w-full h-64 object-cover rounded-lg transition duration-300 group-hover:opacity-80">
+                    <div
+                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-2xl text-white bg-gold-500 p-3 rounded-full"></i>
+                    </div>
+                </a>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="https://instagram.com"
+                    class="inline-flex items-center text-gold-500 hover:text-gold-400 font-semibold">
+                    Follow Us on Instagram <i class="fab fa-instagram ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Barbershop Talk Section -->
+    <section id="videos" class="py-20 bg-dark-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-gold-500 font-semibold uppercase tracking-wider">Our Show</span>
+                <h2 class="text-4xl font-bold font-heading mt-2">The Barbershop Talk</h2>
+                <div class="w-20 h-1 bg-gold-500 mx-auto mt-4"></div>
+                <p class="max-w-2xl mx-auto mt-6 text-gray-300">
+                    Our popular YouTube show featuring style tips, interviews, and conversations about men's lifestyle.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Video 1 -->
+                <div class="bg-dark-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2012&q=80"
+                            alt="Video Thumbnail" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div
+                                class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center text-dark-900 hover:scale-110 transition duration-300">
+                                <i class="fas fa-play text-xl" style="color: aliceblue;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-400 mb-2">
+                            <span>Season 3 • Episode 12</span>
+                            <span class="mx-2">•</span>
+                            <span>45 min</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-heading mb-3">2024 Men's Grooming Trends</h3>
+                        <p class="text-gray-300 mb-4">
+                            Our experts break down the top grooming trends for 2024 and how to incorporate them into
+                            your routine.
+                        </p>
+                        <a href="#" class="text-gold-500 hover:text-gold-400 font-semibold inline-flex items-center">
+                            Watch Now <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="bg-dark-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                            alt="Video Thumbnail" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div
+                                class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center text-dark-900 hover:scale-110 transition duration-300">
+                                <i class="fas fa-play text-xl" style="color: aliceblue;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-400 mb-2">
+                            <span>Season 3 • Episode 8</span>
+                            <span class="mx-2">•</span>
+                            <span>32 min</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-heading mb-3">Beard Care Masterclass</h3>
+                        <p class="text-gray-300 mb-4">
+                            Everything you need to know about beard maintenance, from washing to styling products and
+                            tools.
+                        </p>
+                        <a href="#" class="text-gold-500 hover:text-gold-400 font-semibold inline-flex items-center">
+                            Watch Now <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="bg-dark-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                            alt="Video Thumbnail" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div
+                                class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center text-dark-900 hover:scale-110 transition duration-300">
+                                <i class="fas fa-play text-xl" style="color: aliceblue;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-400 mb-2">
+                            <span>Season 3 • Episode 5</span>
+                            <span class="mx-2">•</span>
+                            <span>28 min</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-heading mb-3">Interview with Celebrity Barber</h3>
+                        <p class="text-gray-300 mb-4">
+                            We sit down with international barber James Smith to discuss his career and tips for
+                            aspiring barbers.
+                        </p>
+                        <a href="#" class="text-gold-500 hover:text-gold-400 font-semibold inline-flex items-center">
+                            Watch Now <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="https://youtube.com"
+                    class="inline-flex items-center bg-gold-500 hover:bg-gold-600 text-dark-900 px-8 py-4 rounded-md font-bold text-lg transition duration-300">
+                    <i class="fab fa-youtube mr-3"></i> Subscribe to Our Channel
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-dark-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-gold-500 font-semibold uppercase tracking-wider">Contact Us</span>
+                <h2 class="text-4xl font-bold font-heading mt-2">Get In Touch</h2>
+                <div class="w-20 h-1 bg-gold-500 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold font-heading mb-6">Our Information</h3>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-gold-500/10 flex items-center justify-center text-gold-500">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-white">Location</h4>
+                                <p class="text-gray-300">123 Kigali Street, Kigali, Rwanda</p>
+                                <a href="#"
+                                    class="text-gold-500 hover:text-gold-400 text-sm inline-flex items-center mt-1">
+                                    Get Directions <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-gold-500/10 flex items-center justify-center text-gold-500">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-white">Phone</h4>
+                                <p class="text-gray-300">+250 123 456 789</p>
+                                <p class="text-gray-300">+250 987 654 321</p>
+                                <a href="tel:+250123456789"
+                                    class="text-gold-500 hover:text-gold-400 text-sm inline-flex items-center mt-1">
+                                    Call Now <i class="fas fa-phone ml-1 text-xs"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-gold-500/10 flex items-center justify-center text-gold-500">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-white">Email</h4>
+                                <p class="text-gray-300">info@menzclassy.com</p>
+                                <p class="text-gray-300">bookings@menzclassy.com</p>
+                                <a href="mailto:info@menzclassy.com"
+                                    class="text-gold-500 hover:text-gold-400 text-sm inline-flex items-center mt-1">
+                                    Email Us <i class="fas fa-envelope ml-1 text-xs"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-gold-500/10 flex items-center justify-center text-gold-500">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-white">Hours</h4>
+                                <div class="text-gray-300 space-y-1">
+                                    <p class="flex justify-between"><span>Monday - Friday:</span> <span>9:00 AM - 8:00
+                                            PM</span></p>
+                                    <p class="flex justify-between"><span>Saturday:</span> <span>9:00 AM - 6:00
+                                            PM</span></p>
+                                    <p class="flex justify-between"><span>Sunday:</span> <span>11:00 AM - 5:00 PM</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <h4 class="font-bold text-white mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://facebook.com"
+                                class="w-10 h-10 rounded-full bg-dark-700 flex items-center justify-center text-gold-500 hover:bg-gold-500 hover:text-dark-900 transition duration-300">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://instagram.com"
+                                class="w-10 h-10 rounded-full bg-dark-700 flex items-center justify-center text-gold-500 hover:bg-gold-500 hover:text-dark-900 transition duration-300">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://youtube.com"
+                                class="w-10 h-10 rounded-full bg-dark-700 flex items-center justify-center text-gold-500 hover:bg-gold-500 hover:text-dark-900 transition duration-300">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://twitter.com"
+                                class="w-10 h-10 rounded-full bg-dark-700 flex items-center justify-center text-gold-500 hover:bg-gold-500 hover:text-dark-900 transition duration-300">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold font-heading mb-6">Send Us a Message</h3>
+                    <form class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-gray-300 mb-2">First Name</label>
+                                <input type="text"
+                                    class="w-full px-4 py-3 bg-dark-700 border border-dark-600 rounded-md focus:outline-none focus:ring-2 focus:ring-dark-900 transition duration-300 text-black placeholder-gray-400">
+                            </div>
+                            <div>
+                                <label class="block text-gray-300 mb-2">Last Name</label>
+                                <input type="text"
+                                    class="w-full px-4 py-3 bg-dark-700 border border-dark-600 rounded-md focus:outline-none focus:ring-2 focus:ring-dark-900 transition duration-300 text-black placeholder-gray-400">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 mb-2">Email</label>
+                            <input type="email"
+                                class="w-full px-4 py-3 bg-dark-700 border border-dark-600 rounded-md focus:outline-none focus:ring-2 focus:ring-dark-900 transition duration-300 text-black placeholder-gray-400">
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 mb-2">Phone</label>
+                            <input type="tel"
+                                class="w-full px-4 py-3 bg-dark-700 border border-dark-600 rounded-md focus:outline-none focus:ring-2 focus:ring-dark-900 transition duration-300 text-black placeholder-gray-400">
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 mb-2">Subject</label>
+                            <select
+                                class="w-full px-4 py-3 bg-dark-700 border border-dark-600 rounded-md focus:outline-none focus:ring-2 focus:ring-dark-900 transition duration-300 text-black">
+                                <option class="bg-white-800">General Inquiry</option>
+                                <option class="bg-white-800">Booking Question</option>
+                                <option class="bg-white-800">Product Inquiry</option>
+                                <option class="bg-white-800">Media/Press</option>
+                                <option class="bg-white-800">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 mb-2">Message</label>
+                            <textarea rows="5"
+                                class="w-full px-4 py-3 bg-dark-700 border border-dark-600 rounded-md focus:outline-none focus:ring-2 focus:ring-dark-900 transition duration-300 text-black placeholder-gray-400"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit"
+                                class="w-full bg-gold-500 hover:bg-gold-600 text-dark-900 py-4 rounded-md font-bold text-lg transition duration-300">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Appointment Section -->
+    <section id="book" class="py-20 bg-dark-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-gold-500 font-semibold uppercase tracking-wider">Appointments</span>
+                <h2 class="text-4xl font-bold font-heading mt-2">Book Your Visit</h2>
+                <div class="w-20 h-1 bg-gold-500 mx-auto mt-4"></div>
+                <p class="max-w-2xl mx-auto mt-6 text-gray-300">
+                    Reserve your time with one of our master barbers for a premium grooming experience.
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-dark-800 p-8 rounded-lg shadow-xl border border-gold-500/10">
+                <form class="booking-form">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-300 mb-2">Full Name</label>
+                            <div class="relative">
+                                <input type="text"
+                                    class="w-full px-4 py-3 bg-dark-700 border border-dark-600 rounded-md pl-10 focus:outline-none focus:ring-2 focus:ring-dark-900 transition duration-300 text-black placeholder-gray-400">
+                                <i
+                                    class="fas fa-user absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 mb-2">Phone Number</label>
+                            <div class="relative">
+                                <input type="tel"
+                                    class="w-full px-4 py-3 bg-dark-700 border border-dark-600 rounded-md pl-10 focus:outline-none focus:ring-2 focus:ring-dark-900 transition duration-300 text-black placeholder-gray-400">
+                                <i
+                                    class="fas fa-phone-alt absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 mb-2">Email Address</label>
+                            <div class="relative">
+                                <input type="email"
+                                    class="w-full px-4 py-3 bg-dark-700 border border-dark-600 rounded-md pl-10 focus:outline-none focus:ring-2 focus:ring-dark-900 transition duration-300 text-black placeholder-gray-400">
+                                <i
+                                    class="fas fa-envelope absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 mb-2">Preferred Barber</label>
+                            <div class="relative">
+                                <select
+                                    class="w-full px-4 py-3 bg-dark-700 border border-dark-600 rounded-md pl-10 focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition duration-300 appearance-none text-white">
+                                    <option value="" class="bg-dark-800">Any Available</option>
+                                    <option value="john" class="bg-dark-800">John Doe</option>
+                                    <option value="mike" class="bg-dark-800">Mike Smith</option>
+                                    <option value="alex" class="bg-dark-800">Alex Kwezi</option>
+                                    <option value="david" class="bg-dark-800">David N.</option>
+                                </select>
+                                <i
+                                    class="fas fa-user-tie absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 mb-2">Service</label>
+                            <div class="relative">
+                                <select
+                                    class="w-full px-4 py-3 bg-dark-700 border border-dark-600 rounded-md pl-10 focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition duration-300 appearance-none text-white">
+                                    <option value="" class="bg-dark-800">Select Service</option>
+                                    <option value="classic" class="bg-dark-800">Classic Haircut - RWF 10,000</option>
+                                    <option value="premium" class="bg-dark-800">Premium Fade - RWF 15,000</option>
+                                    <option value="royal" class="bg-dark-800">Royal Beard Treatment - RWF 12,000
+                                    </option>
+                                    <option value="hot-towel" class="bg-dark-800">Hot Towel Shave - RWF 8,000</option>
+                                    <option value="full" class="bg-dark-800">Full Service Package - RWF 25,000</option>
+                                </select>
+                                <i
+                                    class="fas fa-cut absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 mb-2">Date</label>
+                            <div class="relative">
+                                <input type="date"
+                                    class="w-full px-4 py-3 bg-dark-700 border border-dark-600 rounded-md pl-10 focus:outline-none focus:ring-2 focus:ring-dark-900 transition duration-300 text-black">
+                                <i
+                                    class="fas fa-calendar-day absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 mb-2">Time</label>
+                            <div class="relative">
+                                <select
+                                    class="w-full px-4 py-3 bg-dark-700 border border-dark-600 rounded-md pl-10 focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition duration-300 appearance-none text-white">
+                                    <option value="" class="bg-dark-800">Select Time</option>
+                                    <option value="9:00" class="bg-dark-800">9:00 AM</option>
+                                    <option value="10:00" class="bg-dark-800">10:00 AM</option>
+                                    <option value="11:00" class="bg-dark-800">11:00 AM</option>
+                                    <option value="12:00" class="bg-dark-800">12:00 PM</option>
+                                    <option value="13:00" class="bg-dark-800">1:00 PM</option>
+                                    <option value="14:00" class="bg-dark-800">2:00 PM</option>
+                                    <option value="15:00" class="bg-dark-800">3:00 PM</option>
+                                    <option value="16:00" class="bg-dark-800">4:00 PM</option>
+                                    <option value="17:00" class="bg-dark-800">5:00 PM</option>
+                                </select>
+                                <i
+                                    class="fas fa-clock absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 mb-2">Special Requests</label>
+                            <div class="relative">
+                                <textarea
+                                    class="w-full px-4 py-3 bg-dark-700 border border-dark-600 rounded-md pl-10 focus:outline-none focus:ring-2 focus:ring-dark-900 transition duration-300 text-black placeholder-gray-400"
+                                    rows="3"></textarea>
+                                <i class="fas fa-comment-dots absolute left-3 top-4 text-gray-400"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <button type="submit"
+                            class="w-full bg-gold-500 hover:bg-gold-600 text-dark-900 py-4 rounded-md font-bold text-lg transition duration-300">
+                            Confirm Booking
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 bg-gold-500 text-dark-900">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-bold font-heading mb-4">Stay Updated</h2>
+                <p class="mb-8">
+                    Subscribe to our newsletter for exclusive offers, grooming tips, and updates about The Barbershop
+                    Talk.
+                </p>
+                <form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+                    <input type="email" placeholder="Your email address"
+                        class="flex-grow px-4 py-3 rounded-md border border-dark-900 focus:outline-none focus:ring-2 focus:ring-dark-900">
+                    <button type="submit"
+                        class="bg-dark-900 hover:bg-dark-800 text-white px-6 py-3 rounded-md font-semibold transition duration-300">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-800 pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="w-12 h-12 bg-gold-500 rounded-full flex items-center justify-center text-dark-900 font-bold text-xl mr-3">
+                            MC
+                        </div>
+                        <div class="text-2xl font-bold font-heading">MENZ CLASSY</div>
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        Kigali's premier barbershop offering premium grooming services and home to The Barbershop Talk
+                        show.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://facebook.com"
+                            class="w-10 h-10 rounded-full bg-dark-700 flex items-center justify-center text-gold-500 hover:bg-gold-500 hover:text-dark-900 transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com"
+                            class="w-10 h-10 rounded-full bg-dark-700 flex items-center justify-center text-gold-500 hover:bg-gold-500 hover:text-dark-900 transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://youtube.com"
+                            class="w-10 h-10 rounded-full bg-dark-700 flex items-center justify-center text-gold-500 hover:bg-gold-500 hover:text-dark-900 transition duration-300">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://twitter.com"
+                            class="w-10 h-10 rounded-full bg-dark-700 flex items-center justify-center text-gold-500 hover:bg-gold-500 hover:text-dark-900 transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold font-heading mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-300 hover:text-gold-500 transition duration-300">Home</a>
+                        </li>
+                        <li><a href="#about" class="text-gray-300 hover:text-gold-500 transition duration-300">About
+                                Us</a></li>
+                        <li><a href="#services"
+                                class="text-gray-300 hover:text-gold-500 transition duration-300">Services</a></li>
+                        <li><a href="#barbers" class="text-gray-300 hover:text-gold-500 transition duration-300">Our
+                                Barbers</a></li>
+                        <li><a href="#gallery"
+                                class="text-gray-300 hover:text-gold-500 transition duration-300">Gallery</a></li>
+                        <li><a href="#videos"
+                                class="text-gray-300 hover:text-gold-500 transition duration-300">Barbershop Talk</a>
+                        </li>
+                        <li><a href="#contact"
+                                class="text-gray-300 hover:text-gold-500 transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold font-heading mb-6">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-gold-500 transition duration-300">Classic
+                                Haircut</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-gold-500 transition duration-300">Premium
+                                Fade</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-gold-500 transition duration-300">Beard
+                                Grooming</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-gold-500 transition duration-300">Hot Towel
+                                Shave</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-gold-500 transition duration-300">Hair
+                                Coloring</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-gold-500 transition duration-300">Scalp
+                                Treatments</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-gold-500 transition duration-300">Full Grooming
+                                Package</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold font-heading mb-6">Contact Info</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-gold-500 mt-1 mr-3"></i>
+                            <span class="text-gray-300">123 Kigali Street, Kigali, Rwanda</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt text-gold-500 mt-1 mr-3"></i>
+                            <span class="text-gray-300">+250 123 456 789</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-gold-500 mt-1 mr-3"></i>
+                            <span class="text-gray-300">info@menzclassy.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-clock text-gold-500 mt-1 mr-3"></i>
+                            <span class="text-gray-300">Mon-Fri: 9AM-8PM<br>Sat: 9AM-6PM<br>Sun: 11AM-5PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-gray-700">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 mb-4 md:mb-0">
+                        &copy; 2025 MENZ CLASSY Barbershop. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-gold-500 transition duration-300">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-gold-500 transition duration-300">Terms of
+                            Service</a>
+                        <a href="#" class="text-gray-400 hover:text-gold-500 transition duration-300">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" id="back-to-top"
+        class="fixed bottom-8 right-8 w-12 h-12 bg-gold-500 text-dark-900 rounded-full flex items-center justify-center shadow-lg hover:bg-gold-600 transition duration-300 opacity-0 invisible">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script>
+        // Loading Screen
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                document.getElementById('loading').style.opacity = '0';
+                setTimeout(function () {
+                    document.getElementById('loading').style.display = 'none';
+                }, 500);
+            }, 1000);
+        });
+
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    // Close mobile menu if open
+                    document.getElementById('mobile-menu').classList.add('hidden');
+
+                    // Smooth scroll to target
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+
+                    // Update URL
+                    if (targetId !== '#home') {
+                        history.pushState(null, null, targetId);
+                    } else {
+                        history.pushState(null, null, ' ');
+                    }
+                }
+            });
+        });
+
+        // Back to Top Button
+        window.addEventListener('scroll', function () {
+            const backToTopButton = document.getElementById('back-to-top');
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.opacity = '1';
+                backToTopButton.style.visibility = 'visible';
+            } else {
+                backToTopButton.style.opacity = '0';
+                backToTopButton.style.visibility = 'hidden';
+            }
+        });
+
+        // Form Submission Handling
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                // Here you would typically send the form data to your server
+                // For demo purposes, we'll just show an alert
+                alert('Thank you for your submission! We will contact you shortly.');
+                this.reset();
+            });
+        });
+
+        // Animation on Scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.animate-slide-up, .animate-fade-in');
+
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (elementPosition < windowHeight - 100) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        }
+
+        // Initialize elements with starting styles
+        document.querySelectorAll('.animate-slide-up').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+        });
+
+        document.querySelectorAll('.animate-fade-in').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transition = 'opacity 0.6s ease-out';
+        });
+
+        // Run once on page load
+        animateOnScroll();
+
+        // Then run on scroll
+        window.addEventListener('scroll', animateOnScroll);
+    </script>
+</body>
+
+</html>
